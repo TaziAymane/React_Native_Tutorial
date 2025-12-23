@@ -1,15 +1,50 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
-
+import { Text, View, StyleSheet , Image } from 'react-native'
+import profile from '../assets/img/img.jpg'
 export class home extends Component {
-  render() {
-    return (
-      <View>
-        <Text> textInComponent </Text>
-      </View>
-    )
-  }
+    render() {
+        return (
+            <View style={style.container}>
+                <Image style={style.img} source={profile} />
+                <Text style={style.title}> the number one  </Text>
+                <Text style={{ marginTop: 10, marginBottom: 30 }}> Reading List app  </Text>
+
+                <View style={style.card}>
+                    <Text style={style.cardTitle}>Hello this is a Aymane</Text> 
+                </View>
+            </View>
+
+
+        )
+    }
 }
 
 export default home
-const style = StyleSheet.create({})
+const style = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center"
+    },
+    title: {
+        fontSize: 18,
+        fontWeight: "bold"
+    },
+    card : {
+        backgroundColor : "#111",
+        padding : 20 ,
+        borderRadius : 5 ,
+        boxShadow : "4px  4px rgba(0,0,0,0.1)"
+
+    },
+    cardTitle : {
+        color : "white"
+    },
+    img : {
+        width : 200 ,
+        height : 200 ,
+        // marginVertical : 20,
+        borderRadius : 5 
+
+    }
+})

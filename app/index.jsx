@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet , Image } from 'react-native'
+import { Link } from 'expo-router'
 import profile from '../assets/img/img.jpg'
 export class home extends Component {
     render() {
@@ -12,6 +13,8 @@ export class home extends Component {
                 <View style={style.card}>
                     <Text style={style.cardTitle}>Hello this is a Aymane</Text> 
                 </View>
+                <Link style={[style.card ,{} ]} href={'/about'}>About Page</Link>
+                <Link style={[style.card ,{} ]} href={'/contact'}>Contact Page</Link>
             </View>
 
 
@@ -34,8 +37,9 @@ const style = StyleSheet.create({
         backgroundColor : "#111",
         padding : 20 ,
         borderRadius : 5 ,
-        boxShadow : "4px  4px rgba(0,0,0,0.1)"
-
+        boxShadow : "4px  4px rgba(0,0,0,0.1)",
+        color : 'white' ,
+        marginTop : 5
     },
     cardTitle : {
         color : "white"
